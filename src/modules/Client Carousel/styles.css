@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 200px;
+  max-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.scene {
+  width: 260px;
+  height: 200px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.scene .carousel.keen-slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: visible;
+  transform: translateZ(-288px);
+  transform-style: preserve-3d;
+}
+
+/* Carousel item */
+.carousel__cell {
+  position: absolute;
+  width: 350px; /* Default to 80% for larger screens */
+  height: 450px;
+  max-width: 350px; /* Set a max width */
+  transition: width 0.3s, height 0.3s; /* Smooth transition on resize */
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .carousel__cell {
+    width: 200px; /* Adjust width on large tablets or smaller screens */
+    height: 250px;
+    left: 50px;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel__cell {
+    width: 200px; /* Adjust width on medium screens */
+    height: 300px;
+
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel__cell {
+    width: 200px; /* Adjust width for smaller screens */
+    height: 250px;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel__cell {
+    width: 150px; /* Full width for mobile devices */
+    height: 250px;
+    left: 50px;
+    overflow-x: hidden;
+  }
+}

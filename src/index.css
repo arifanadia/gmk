@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Tilt+Warp&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .text-shadow-primary {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@layer base {
+  .hero-title {
+    @apply text-[32px] sm:text-[38px] md:text-[48px] xl:text-[64px] leading-[1.25] text-heroTitle  font-tiltWarp;
+  }
+  .hero-carousel-wrapper {
+    @apply pt-[120px] pr-[16px] pb-[80px] pl-[16px] sm:pt-[130px] lg:pt-[150px] lg:pb-[100px] xl:pt-0  xl:pl-[96px] xl:pr-[146px] xl:min-h-screen xl:flex xl:items-end;
+  }
+  .description{
+    @apply  text-base md:text-lg font-actor text-formTitle leading-normal
+  }
+}

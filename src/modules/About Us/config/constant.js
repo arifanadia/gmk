@@ -1,0 +1,5 @@
+export const aboutUsData = {
+  title: "Over Ons",
+  descriptionOne: `Wij zijn gespecialiseerd in Dak reparaties, -renovaties en -onderhoud. Dak lekkage? Spoedaanvragen? Dan bent u bij ons aan het juiste adres. Onze 24 uursservice zorgt ervoor dat wij u altijd op korte termijn een oplossing kunnen bieden. Wij brengen de verwachtingen van onze klanten in kaart en geven een duurzame passende oplossing voor uw klus. Dit wordt mogelijk gemaakt door onze vakmensen die jarenlang ervaring hebben. De specialisaties zijn o.a. het leveren en aanbrengen van Bitumen, Epdm en pannen daken. Maar ook het vernieuwen van lood en zink.`,
+  descriptionTwo: `Goed om te weten; Het materiaal dat wij gebruiken behoort tot de A klasse producten, dit zorgt voor een perfect eindresultaat. Het doel is u zo snel en goed mogelijk te helpen. Wij leggen de lat hoog en streven naar het beste eindresultaat. Hiervoor hebben wij uw hulp nodig; transparantie, goede communicatie en duidelijke afspraken. Heeft u vragen of wilt u meer informatie? Wij staan klaar om u verder te helpen. Dakonderhoud GMK uw specialist voor alle klussen in en rondom uw huis.`,
+};

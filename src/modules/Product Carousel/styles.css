@@ -1,0 +1,31 @@
+.mySwiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiperSlideProduct {
+  background-position: center;
+  background-size: cover;
+  width: 80%; /* Adjust size for larger screens */
+  height: 300px;
+}
+
+.swiperSlideProduct img {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .swiperSlideProduct {
+    width: 300px; /* Fix the width for medium screens */
+    height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiperSlideProduct {
+    width: 350px; /* Adjust for large screens */
+    height: 350px;
+  }
+}
