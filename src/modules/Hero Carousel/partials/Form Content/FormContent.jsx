@@ -1,62 +1,8 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import { toast } from "react-toastify";
 
 const FormContent = ({ data }) => {
   const customForm = data?.customForm;
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   surname: "",
-  //   email: "",
-  //   message: "",
-  // });
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prev) => ({
-  //     ...prev,
-  //     [name]: value,
-  //   }));
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const { name, email, message, surname } = formData;
-
-  //   if (!name || !email || !message || !surname) {
-  //     toast.error("Please fill in all fields.");
-  //     return;
-  //   }
-
-  //   try {
-  //     const result = await emailjs.send(
-  //       import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID
-  //       import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Template ID
-  //       {...formData},
-  //       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-  //     );
-
-  //     toast.success("Email sent successfully");
-
-  //     // Send the auto-reply to the user with dynamic reply_to field
-  //     const autoReplyResult = await emailjs.send(
-  //       import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID
-  //       import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID, // Auto-reply template ID
-  //       {
-  //         name,
-  //         email,
-  //         message,
-  //       },
-  //       import.meta.env.VITE_EMAILJS_PUBLIC_KEY, // Public Key
-  //       { reply_to: email } // Dynamically set the reply_to field to user's email
-  //     );
-  //     toast.success("auto-reply sent successfully");
-  //   } catch (error) {
-  //     toast.error("Error sending email");
-  //   }
-  // };
 
 
   return (
@@ -93,7 +39,7 @@ const FormContent = ({ data }) => {
       {/* Form Section */}
       <div className="px-4 flex-1 md:flex items-center justify-center bg-slate-50 lg:min-h-screen absolute lg:static -bottom-72 md:-bottom-80 w-full">
         {customForm && (
-          <form onSubmit={handleSubmit} className="my-6 md:pt-0 mt-2">
+          <form className="my-6 md:pt-0 mt-2">
             <h1 className="text-2xl lg:text-3xl text-center pb-5 text-formTitle w-2/3 mx-auto font-tiltWarp">
               {customForm.title}
             </h1>
@@ -107,8 +53,7 @@ const FormContent = ({ data }) => {
                       </label>
                       <input
                         name="name"
-                        value={formData.name}
-                        onChange={handleChange}
+                  
                         placeholder={
                           customForm.formFields[0]?.placeholder ||
                           "Enter your name"
@@ -124,8 +69,7 @@ const FormContent = ({ data }) => {
                       </label>
                       <input
                         name="surname"
-                        value={formData.surName}
-                        onChange={handleChange}
+                     
                         placeholder={
                           customForm.formFields[1]?.placeholder ||
                           "Enter your surname"
@@ -143,8 +87,7 @@ const FormContent = ({ data }) => {
                       </label>
                       <input
                         name="email"
-                        value={formData.email}
-                        onChange={handleChange}
+                
                         placeholder={
                           customForm.formFields[2]?.placeholder ||
                           "Enter your email"
@@ -162,8 +105,7 @@ const FormContent = ({ data }) => {
                       </label>
                       <textarea
                         name="message"
-                        value={formData.message}
-                        onChange={handleChange}
+                   
                         placeholder={
                           customForm.formFields[3]?.placeholder ||
                           "Enter your message"
